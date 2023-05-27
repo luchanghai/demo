@@ -2,6 +2,8 @@ from tomcat:8.5.46-jdk8-openjdk
 MAINTAINER ies
 RUN rm -rf /usr/local/tomcat/webapps/*
 
+COPY hokuginNttdStub.war /usr/local/tomcat/webapps/
+
 RUN unzip /usr/local/tomcat/webapps/hokuginNttdStub.war -d /usr/local/tomcat/webapps/ROOT
 
 RUN mkdir /home/vcap
